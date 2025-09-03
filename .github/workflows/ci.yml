@@ -15,7 +15,8 @@ jobs:
       - name: List files
         run: ls -l
 
-      - name: Run W3C HTML Validator
-        uses: Cyb3r-Jak3/w3c-validation-action@v1
-        with:
-          directory: .
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Validate HTML
+        run: htmlhint "**/*.html"
