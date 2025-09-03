@@ -15,7 +15,7 @@ jobs:
       - name: List files
         run: ls -l
 
-      - name: Validate HTML
-        uses: Cyb3r-Jak3/html5validator-action@v7
+      - name: Run W3C HTML Validator
+        uses: Cyb3r-Jak3/w3c-validation-action@v1
         with:
-          root: .
+          directory: .
